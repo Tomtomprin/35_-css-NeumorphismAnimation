@@ -1,0 +1,138 @@
+body {
+    background: #e0e0e0;
+
+}
+
+/* テキスト配置のためのflex設定 */
+.area_text {
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* テキスト共通設定 */
+.text {
+    font-family: sculpin, sans-serif;
+    font-weight: 700;
+    color: #e0e0e0;
+    font-size: 200px;
+    text-shadow: 0px 0px 0px #e0e0e0,
+        0px 0px 0px #f2f2f2;
+    animation-name: animationAppearText;
+    animation-fill-mode: forwards;
+    animation-duration: 0.5s;
+    animation-delay: 0.4s;
+    animation-timing-function: ease;
+    margin: auto;
+}
+
+/* テキスト遅延出現設定 */
+.m02 {
+    animation-delay: 0.6s;
+
+}
+
+.m03 {
+    animation-delay: 0.8s;
+
+}
+
+.m04 {
+    animation-delay: 1s;
+
+}
+
+.m05 {
+    animation-delay: 1.2s;
+
+}
+
+/* 最後の文字だけ、適用アニメーションを変えて動きを変化させる */
+.m06 {
+    animation-name: animationAppearText2;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    margin: auto;
+    animation-delay: 1.4s;
+
+}
+
+
+
+
+
+
+
+/* 文字「Tomto」アニメーション */
+@keyframes animationAppearText {
+    from {
+        text-shadow: 0px 0px 0px #e0e0e0,
+            0px 0px 0px #f2f2f2;
+    }
+
+    to {
+        text-shadow: 8px 8px 20px #cecece,
+            -8px -8px 20px #f2f2f2;
+    }
+}
+
+/* 文字「m」アニメーション */
+@keyframes animationAppearText2 {
+    0% {
+        text-shadow: 0px 0px 0px #e0e0e0,
+            0px 0px 0px #f2f2f2;
+    }
+
+    40% {
+        text-shadow: 18px 18px 40px #c7c7c7,
+            -18px -18px 40px #f9f9f9;
+    }
+
+    50% {
+        text-shadow: 8px 8px 20px #cecece,
+            -8px -8px 20px #f2f2f2;
+    }
+
+    80% {
+        text-shadow: 14px 14px 28px #c7c7c7,
+            -14px -14px 28px #f9f9f9;
+    }
+
+    100% {
+        text-shadow: 8px 8px 20px #cecece,
+            -8px -8px 20px #f2f2f2;
+    }
+}
+
+
+
+
+
+
+/*▲アニメーションの開始と終了時*/
+/*none→指定なし。初期値。*/
+/*forwards→元の状態に戻らずアニメーション最後の状態を維持*/
+/*backwards→アニメーションの最初の状態に戻る*/
+/*both→backwardsとforwardsの両方の状態を適用*/
+
+/*▲アニメーション変化時間*/
+/* animation-iteration-count:infinite; */
+/*▲ループさせる*/
+
+/*▲進行具合*/
+/*ease→初期値：開始時と終了時が緩やかに変化*/
+/*ease-in→開始時は緩やかに変化、終了に近づくと早く変化。ease-outは逆*/
+/*ease-in-out→開始時と終了時は、かなり緩やかに変化*/
+/*linear→開始から終了まで一定に変化・・・など。他にも、複数あり*/
+
+/*▲アニメーションの開始を遅らせる*/
+
+
+/* animation-direction: normal; */
+
+/*アニメーションの再生の向きを順方向、逆方向、前後反転のいずれにするかを決める*/
+/*normal→初期値：普通方向の再生で動きを繰り返す*/
+/*reverse→逆方向の再生で動きを繰り返す*/
+/*alternate→奇数回では普通方向、偶数回では逆方向の再生で動きを繰り返す*/
+/*alternate-reverse→毎回逆方向の再生、奇数回では逆方向、偶数回では普通方向*/
